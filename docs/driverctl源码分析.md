@@ -3,6 +3,13 @@
 ![](image/Pasted%20image%2020230522212140.png)
 
 
+* https://www.cnblogs.com/hugetong/p/9548675.html
+* https://www.kernel.org/doc/Documentation/ABI/testing/sysfs-bus-platform
+
+![](image/Pasted%20image%2020230522213838.png)
+
+
+
 ```
 #!/bin/bash
 
@@ -222,6 +229,8 @@ while (($# > 0)); do
     shift
 done
 
+# 过滤所有命令，$cmd 是子命令flag，如果过滤后没有cmd则显示帮助
+# 这个写法，如果后面乱加一些非可识别的cmd，也不会报错
 if [ -z "$cmd" ]; then
     usage
     exit 1
